@@ -1,0 +1,92 @@
+# =============================================================================
+# Secrets & environment  (NEVER commit real credentials)
+# =============================================================================
+.env
+.env.*
+# keep the templates
+!.env.example
+!.env.prod.example
+
+# =============================================================================
+# Java / Maven (backend)
+# =============================================================================
+target/
+*.class
+*.jar
+*.war
+*.ear
+# ...but keep the Maven wrapper jar if a project ever ships one
+!**/.mvn/wrapper/maven-wrapper.jar
+hs_err_pid*
+replay_pid*
+.mvn/.develocity/
+
+# Gradle (in case it is ever used)
+.gradle/
+build/
+
+# =============================================================================
+# Node / Vite (frontend)
+# =============================================================================
+node_modules/
+dist/
+dist-ssr/
+.vite/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.eslintcache
+
+# =============================================================================
+# Logs & local run artifacts
+# =============================================================================
+*.log
+backend-run.log
+frontend-run.log
+logs/
+
+# =============================================================================
+# Local databases / data
+# =============================================================================
+*.db
+*.sqlite
+*.sqlite3
+pgdata/
+miniodata/
+
+# =============================================================================
+# Editors / IDEs
+# =============================================================================
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+!.vscode/extensions.json
+*.swp
+*.swo
+.project
+.classpath
+.settings/
+.factorypath
+
+# =============================================================================
+# OS files
+# =============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# =============================================================================
+# Build / deploy scratch
+# =============================================================================
+*.pem
+*.key
+backup-*.sql

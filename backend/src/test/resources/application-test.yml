@@ -1,0 +1,14 @@
+# Integration tests run against a dedicated database on the local compose Postgres.
+# (Testcontainers deps remain in the pom; enabling them in CI needs the docker-java
+#  API-version >= 1.41 fix for the Rancher/moby engine.)
+spring:
+  datasource:
+    url: ${TEST_DB_URL:jdbc:postgresql://localhost:5432/msamp_test}
+    username: ${TEST_DB_USERNAME:msamp}
+    password: ${TEST_DB_PASSWORD:msamp}
+  flyway:
+    enabled: true
+    clean-disabled: false
+  jpa:
+    hibernate:
+      ddl-auto: validate
