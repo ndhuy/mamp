@@ -39,7 +39,10 @@ cd frontend; npm run dev                      # frontend -> :5173
 Frontend: http://localhost:5173 (logs in through the Vite proxy) · Backend: http://localhost:8080
 MinIO console: http://localhost:9001 (minioadmin/minioadmin) · Mailpit: http://localhost:8025
 
-**Seeded admin:** `admin` / `Admin123!` — or register a new account at `/register`.
+**Local dev admin:** the dev-profile seeder creates a local admin on first run and
+prints its credentials once in the backend startup log. Or register a new account at
+`/register`. In production the admin is created only from your `.env`
+(`INITIAL_ADMIN_*`) — no default credentials exist.
 
 ## Auth API (implemented)
 

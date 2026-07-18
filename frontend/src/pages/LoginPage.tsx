@@ -79,9 +79,6 @@ export function LoginPage() {
             Don&apos;t have an account?{' '}
             <Link component={RouterLink} to="/register">Create one</Link>
           </Typography>
-          <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mt: 2, textAlign: 'center' }}>
-            Demo admin: admin / Admin123!
-          </Typography>
         </CardContent>
       </Card>
     </Box>

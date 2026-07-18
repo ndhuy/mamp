@@ -37,10 +37,10 @@ public class ProdInitializer implements CommandLineRunner {
     private final SiteCategoryRepository siteCategoryRepository;
     private final RejectionCategoryRepository rejectionCategoryRepository;
 
-    @Value("${INITIAL_ADMIN_USERNAME:admin}")
+    @Value("${INITIAL_ADMIN_USERNAME}")
     private String adminUsername;
 
-    @Value("${INITIAL_ADMIN_EMAIL:admin@example.com}")
+    @Value("${INITIAL_ADMIN_EMAIL}")
     private String adminEmail;
 
     @Value("${INITIAL_ADMIN_PASSWORD:}")

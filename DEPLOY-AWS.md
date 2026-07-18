@@ -116,6 +116,8 @@ nano .env      # fill in real values
 openssl rand -base64 24   # -> POSTGRES_PASSWORD
 openssl rand -base64 24   # -> MINIO_ROOT_PASSWORD
 openssl rand -base64 48   # -> JWT_SECRET
+# INITIAL_ADMIN_USERNAME and INITIAL_ADMIN_EMAIL are required — there are no
+# default admin credentials; compose refuses to start until you set them.
 # Set INITIAL_ADMIN_PASSWORD to something you'll remember (or leave blank to
 # have one generated and printed in the backend logs on first start).
 ```
