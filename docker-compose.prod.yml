@@ -65,6 +65,10 @@ services:
       INITIAL_ADMIN_USERNAME: ${INITIAL_ADMIN_USERNAME:?set INITIAL_ADMIN_USERNAME in .env}
       INITIAL_ADMIN_EMAIL: ${INITIAL_ADMIN_EMAIL:?set INITIAL_ADMIN_EMAIL in .env}
       INITIAL_ADMIN_PASSWORD: ${INITIAL_ADMIN_PASSWORD:-}
+      # Public origin(s) the browser loads the app from (comma-separated for several).
+      # Behind Cloudflare/nginx the browser Origin is https://<your-domain>, which must
+      # be whitelisted or the backend rejects API calls with 403 "Invalid CORS request".
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:5173}
     depends_on:
       postgres:
         condition: service_healthy
